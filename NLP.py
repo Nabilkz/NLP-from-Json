@@ -3,7 +3,8 @@ import numpy as np
 import tensorflow as tf
 import tflearn
 import random
-
+from tkinter import *
+f = 'intents.json'
 #Usde to for Contextualisation and Other NLP Tasks.
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
@@ -174,16 +175,16 @@ def response(sentence, userID='123', show_details=False):
                 # Tag Finding
                 if i['tag'] == results[0][0]:
                     # Random Response from High Order Probabilities
-                    return print(random.choice(i['responses']))
+                    return random.choice(i['responses'])
 
             results.pop(0)
             
             
             
-while True:
-    input_data = input("You- ")
-    answer = response(input_data)
-    answer
+# while True:
+#     input_data = input("You- ")
+#     answer = response(input_data)
+#     answer
             
             
             
